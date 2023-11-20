@@ -1,6 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Schema, model, connect } from 'mongoose';
-import { Gurdian, Student, UserName } from './students/student.interface';
+import { Gurdian, Student, UserName } from './student.interface';
 
 const userNameSchema = new Schema<UserName>({
   firstName: {
