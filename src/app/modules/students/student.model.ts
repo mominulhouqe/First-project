@@ -42,10 +42,8 @@ const studentSchema = new Schema<Student>({
     required: true,
   },
   gurdian: gurdianSchema,
-  isActive: {
-    type: String,
-    required: true,
-  },
+  isActive:["active","inactive"]
+  
 });
-
-const Student = model<Student>('Student', studentSchema);
+ 
+export const StudentModel = model<Student>('Student', studentSchema);
