@@ -1,5 +1,3 @@
-
-
 export type Gurdian = {
   fatherName: string;
   mother: string;
@@ -24,8 +22,5 @@ export type Student = {
   avatar?: string;
   address: string;
   gurdian: Gurdian;
-  isActive:"active"|"inactive"
+  isActive: 'active' | 'inactive';
 };
-
-
-

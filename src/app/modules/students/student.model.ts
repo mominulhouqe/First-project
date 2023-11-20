@@ -30,20 +30,16 @@ const studentSchema = new Schema<Student>({
   dateOfBirth: String,
   email: {
     type: String,
-    required: true,
   },
   contactNumber: {
     type: String,
-    required: true,
   },
   bloodGroup: ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'],
   address: {
     type: String,
-    required: true,
   },
   gurdian: gurdianSchema,
-  isActive:["active","inactive"]
-  
+  isActive: ['active', 'inactive'],
 });
- 
+
 export const StudentModel = model<Student>('Student', studentSchema);
