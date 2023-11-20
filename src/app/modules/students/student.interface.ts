@@ -1,4 +1,4 @@
-import { Schema, model, connect } from 'mongoose'; // 1. Create an interface representing a document in MongoDB.
+
 
 export type Gurdian = {
   fatherName: string;
@@ -7,20 +7,25 @@ export type Gurdian = {
   fatherContactNo: string;
 };
 
+export type UserName = {
+  firstName: string;
+  middleName: string;
+  lastName: string;
+};
+
 export type Student = {
   id: string;
-  name: {
-    firstName: string;
-
-    middleName: string;
-    lastName: string;
-  };
+  name: UserName;
   gender: 'male' | 'female';
-  dateOfBirth: string;
+  dateOfBirth?: string;
   contactNumber: string;
   bloodGroup?: 'A+' | 'A-' | 'B+' | 'B-' | 'AB+' | 'AB-' | 'O+' | 'O-';
   email: string;
   avatar?: string;
   address: string;
   gurdian: Gurdian;
+  isActive:"active"|"inactive"
 };
+
+
+
