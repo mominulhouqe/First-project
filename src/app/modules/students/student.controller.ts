@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { Request, Response } from 'express';
 import { StudentServices } from './student.service';
 
@@ -13,7 +14,11 @@ const createStudent = async (req: Request, res: Response) => {
       data: result,
     });
   } catch (error) {
-    console.log(error);
+    res.status(500).json({
+      success: false,
+      message: 'Something wrong',
+      data: error,
+    });
   }
 };
 
@@ -26,7 +31,11 @@ const getAllStudents = async (req: Request, res: Response) => {
       data: result,
     });
   } catch (error) {
-    console.log(error);
+    res.status(500).json({
+      success: false,
+      message: 'Something wrong',
+      data: error,
+    });
   }
 };
 
@@ -41,7 +50,11 @@ const getSingelStudent = async (req: Request, res: Response) => {
       data: result,
     });
   } catch (err) {
-    console.log(err);
+    res.status(500).json({
+      success: false,
+      message: 'Something wrong',
+      data: err,
+    });
   }
 };
 
