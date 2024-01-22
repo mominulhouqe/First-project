@@ -1,8 +1,14 @@
 export type TUser = {
   id: string;
   password: string;
-  needsPasswordChange: boolean;
-  role: 'admin' | 'student' | 'faculty';
-  status: 'in-progress' | 'blocked';
+  needPasswordChange: boolean;
+  role: "admin" | "student" | "faculty";
+  status: "in-proccess" | "blocked";
   isDeleted: boolean;
+};
+ 
+export type NewUser = {
+  id:string;
+  password: string;
+  role: string;
 };

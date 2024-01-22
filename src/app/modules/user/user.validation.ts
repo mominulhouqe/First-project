@@ -1,14 +1,14 @@
-import { z } from 'zod';
+import { z } from "zod";
 
 const userValidationSchema = z.object({
-  pasword: z
+  password: z
     .string({
-      invalid_type_error: 'Password must be string',
+      invalid_type_error: "password must be string",
     })
-    .max(20, { message: 'Password can not be more than 20 characters' })
+    .max(20, { message: "message cannot be more than 20 carcherter" })
     .optional(),
 });
 
-export const UserValidation = {
+export const userValidation = {
   userValidationSchema,
 };
